@@ -12,29 +12,86 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="fav.ico">
 </head>
 <body class="main">
 
 <!-- Write down here -->
 <div>
-    <!-- Main contents -->
-    <div class="container">
-
-        <div class="main-icon">
-            <div class="c fadeUp1" id="circleContainer">
-                <img src="ico.jpg" class="circle responsive-img" id="circleImage" alt="">
-
-
-                <div class="center over">
-                    <p class="text-big fadeUp1"><b>Hello there!&#x1f44b;</b></p>
-                    <p class="text-normal fadeUp2"><b>This is a Tomoki's page</b></p>
-                    <p class="text-normal fadeUp3"><b>このページは作成中です!</b></p>
+    <!-- First contents -->
+    <div class="first" id="first">
+        <div class="container">
+            <div class="main-icon">
+                <div class="c fadeUp1" id="circleContainer">
+                    <img src="ico.jpg" class="circle responsive-img" id="circleImage" alt="">
+                    <div style="width: 120%; margin: 0 -10%;">
+                        <div class="center">
+                            <p class="text-big fadeUp1"><b>Hello there!&#x1f44b;</b></p>
+                            <p class="text-normal fadeUp2"><b>Welcome to Tomoki's page</b></p>
+                            <a href="#second" class="text-normal fadeUp3 next-button1"><i class="material-icons">keyboard_arrow_down</i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </div>
     </div>
-</div>
+    <div class="second" id="second">
+        <div class="container">
+            <div style="margin-top: 0; padding-top: 10vh" class="text-big">
 
+                <h2 class="h text-big"><b>My Profile</b></h2>
+            </div>
+            <div class="container left" style="padding-top: 7vh; width: 100%">
+                <div class="container">
+
+                    <p class="text-normal"><b>名前: 糸山 智基</b></p>
+                    <p class="text-normal"><b>年齢: 16</b></p>
+                    <p class="text-normal"><b>学校: 越谷西高校</b></p>
+                    <p class="text-normal"><b>部活動: 軽音楽部(Ba. Dr.)</b></p>
+                    <p class="text-normal"><b>趣味: 楽器, プログラミング, 旅行</b></p>
+                </div>
+
+                <div class="center">
+                    <a href="#third" class="text-normal next-button2"><i class="material-icons">keyboard_arrow_down</i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="third" class="third">
+        <div class="container">
+            <div style="margin-top: 0; padding-top: 10vh" class="text-big">
+
+                <h2 class="h text-big"><b>Contact</b></h2>
+            </div>
+            <div class="container left" style="padding-top: 7vh; width: 100%">
+                <div class="container">
+                    <p class="text-normal">Instagram: <b>@temokii</b></p>
+                    <p class="text-normal">Address: <b>tomoki.itoyama.dev@gmail.com</b></p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const scorrllLinks = document.querySelectorAll('a[href^="#"]');
+        scorrllLinks.forEach((scorrllLink) => {
+            scorrllLink.addEventListener("click", (e) => {
+                e.preventDefault();
+                const hrefLink = scorrllLink.getAttribute("href");
+                const targetContent = document.getElementById(hrefLink.replace("#", ""));
+                const rectTop = targetContent.getBoundingClientRect().top;
+                const positionY = window.pageYOffset;
+                const target = rectTop + positionY;
+                window.scrollTo({
+                    top: target,
+                    behavior: "smooth",
+                });
+            });
+        });
+
+    </script>
+</div>
 </body>
 </html>

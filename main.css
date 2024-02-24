@@ -1,23 +1,68 @@
 .main {
-    background-color: #ebeff9;
-    height: 100vh;
+    height: 300vh;
     font-family: "Noto Sans JP", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    overflow: hidden;
+    color: #303030;
+}
+
+.h{
+    padding: 0.25em 0.5em;
+    background: transparent;
+    border-left: solid 5px #7db4e6;
+}
+
+.first{
+    background-color: #ebeff9;
+    height: 100vh;
+}
+
+.second{
+    background-color: #f9ebef;
+    height: 100vh;
+}
+
+.third{
+    background-color: #eff9eb;
+    height: 100vh
 }
 
 .over{
-    width: calc(100% + 20vh);
-    margin: 0 -10vh;
+    width: calc(100% + 10vh);
+    margin: 0 -5vh;
+}
+
+.s-over{
+    width: calc(100% + 10vh);
+    margin-right: 10vh;
+}
+
+.next-button1{
+    display: inline-block;
+    border: 3px solid black;
+    border-radius: 20px;
+    width: 50px;
+    box-sizing: border-box;
+    background: #ebeff9;
+    color: black;
+}
+
+.next-button2{
+    display: inline-block;
+    border: 3px solid black;
+    border-radius: 20px;
+    width: 50px;
+    box-sizing: border-box;
+    background: #f9ebef;
+    color: black;
 }
 
 .text-big{
-    font-size: xxx-large;
+    font-size: clamp(2.4rem, calc(2.2rem + 0.625vw), 2.9rem);
 }
 
 .text-normal{
-    font-size: xx-large;
+    font-size: clamp(1.2rem, calc(1rem + 0.625vw), 1.7rem);
 }
 
 .fadeUp1{
