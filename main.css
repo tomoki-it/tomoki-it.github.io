@@ -1,0 +1,101 @@
+.main {
+    background-color: #ebeff9;
+    height: 100vh;
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    overflow: hidden;
+}
+
+.over{
+    width: calc(100% + 20vh);
+    margin: 0 -10vh;
+}
+
+.text-big{
+    font-size: xxx-large;
+}
+
+.text-normal{
+    font-size: xx-large;
+}
+
+.fadeUp1{
+    animation-name:fadeUpAnime;
+    animation-duration:1.5s;
+    animation-fill-mode:forwards;
+    opacity:0;
+}
+
+.fadeUp2{
+    animation-name:fadeUpAnime;
+    animation-delay: 1.5s;
+    animation-duration:1.5s;
+    animation-fill-mode:forwards;
+    opacity:0;
+}
+
+.fadeUp3{
+    animation-name:fadeUpAnime;
+    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-fill-mode:forwards;
+    opacity:0;
+}
+
+@keyframes fadeUpAnime{
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.c {
+    position: relative;
+}
+
+.c img {
+    display: block;
+}
+
+
+.c::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    background-image: linear-gradient(120deg, #f7b5f3 0%, #f7dab5 50%, #b5f7b9 100%);
+    background-size: 200%;
+    animation: border-gradient 10s infinite;
+    z-index: -1;
+}
+
+@keyframes border-gradient {
+    0% {
+        background-position: 0% 40%;
+    }
+    50% {
+        background-position: 100% 60%;
+    }
+    100% {
+        background-position: 0% 40%;
+    }
+}
