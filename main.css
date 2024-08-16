@@ -1,146 +1,34 @@
-.main {
-    height: 300vh;
-    font-family: "Noto Sans JP", sans-serif;
+
+body {
+    font-family: "Archivo Black", "Noto Sans JP", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    color: #303030;
+    color: #CED5D0;
+    background-color: #160b2c;
+    overflow-x: hidden;
 }
-
-.h{
-    padding: 0.25em 0.5em;
-    background: transparent;
-    border-left: solid 5px #7db4e6;
-}
-
-.first{
-    background-color: #ebeff9;
-    height: 100vh;
-}
-
-.second{
-    background-color: #f9ebef;
-    height: 100vh;
-}
-
-.third{
-    background-color: #eff9eb;
-    height: 100vh
-}
-
-.over{
-    width: calc(100% + 10vh);
-    margin: 0 -5vh;
-}
-
-.s-over{
-    width: calc(100% + 10vh);
-    margin-right: 10vh;
-}
-
-.next-button1{
-    display: inline-block;
-    border: 3px solid black;
-    border-radius: 20px;
-    width: 50px;
-    box-sizing: border-box;
-    background: #ebeff9;
-    color: black;
-}
-
-.next-button2{
-    display: inline-block;
-    border: 3px solid black;
-    border-radius: 20px;
-    width: 50px;
-    box-sizing: border-box;
-    background: #f9ebef;
-    color: black;
-}
-
-.text-big{
-    font-size: clamp(2.4rem, calc(2.2rem + 0.625vw), 2.9rem);
-}
-
-.text-normal{
-    font-size: clamp(1.2rem, calc(1rem + 0.625vw), 1.7rem);
-}
-
-.fadeUp1{
-    animation-name:fadeUpAnime;
-    animation-duration:1.5s;
-    animation-fill-mode:forwards;
-    opacity:0;
-}
-
-.fadeUp2{
-    animation-name:fadeUpAnime;
-    animation-delay: 1.5s;
-    animation-duration:1.5s;
-    animation-fill-mode:forwards;
-    opacity:0;
-}
-
-.fadeUp3{
-    animation-name:fadeUpAnime;
-    animation-delay: 3s;
-    animation-duration: 1.5s;
-    animation-fill-mode:forwards;
-    opacity:0;
-}
-
-@keyframes fadeUpAnime{
-    from {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.main-icon{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.background{
     position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    height: 0;
+    width: 100vw;
+    z-index: 1;
 }
 
-.c {
-    position: relative;
+.background-img{
+    opacity: 0.3;
+    height: 100vh;
+    width: 100vw;
+    filter: blur(2px);
+    background-image: url("img/background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
-
-.c img {
-    display: block;
-}
-
-
-.c::before {
-    content: "";
+.welcome{
     position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    border-radius: 50%;
-    background-image: linear-gradient(120deg, #f7b5f3 0%, #f7dab5 50%, #b5f7b9 100%);
-    background-size: 200%;
-    animation: border-gradient 10s infinite;
-    z-index: -1;
-}
-
-@keyframes border-gradient {
-    0% {
-        background-position: 0% 40%;
-    }
-    50% {
-        background-position: 100% 60%;
-    }
-    100% {
-        background-position: 0% 40%;
-    }
+    z-index: 2;
+    opacity: 1;
+    height: 100%;
+    width: 100vw;
 }
